@@ -77,6 +77,7 @@ tess <- function(..., xgrid=NULL, ygrid=NULL, tiles=NULL, image=NULL,
     } else {
       # tile list
       window <- rescue.rectangle(window)
+      levels(tiles) <- lev
       out <- list(type="tiled", window=window, tiles=tiles, n=length(tiles))
     }
   } else if(isimage) {
